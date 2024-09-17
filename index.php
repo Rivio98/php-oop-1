@@ -1,3 +1,17 @@
+<?php
+
+//classe movie
+class Movie
+{   //dichiarazioni della variabile d'istanza
+    public $year;
+    public $genre;
+    public $title;
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
