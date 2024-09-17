@@ -21,6 +21,12 @@ class Movie
         return " Title: " . $this->title . ",Type of genre " . $this->genre . ",Production year: " . $this->year;
     }
 }
+
+//creazione di oggetti movie
+$Batman_Begins = new Movie(2005, "Cinecomics", "Batman Begins");
+$Transformers = new Movie(2007, "Action,Blockbuster", "Transformers");
+
+
 ?>
 
 <!DOCTYPE html>
