@@ -26,7 +26,6 @@ class Movie
 $Batman_Begins = new Movie(2005, "Cinecomics", "Batman Begins");
 $Transformers = new Movie(2007, "Action,Blockbuster", "Transformers");
 
-
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +39,12 @@ $Transformers = new Movie(2007, "Action,Blockbuster", "Transformers");
 </head>
 
 <body>
+    <div class="container">
+        <h1>PHP OOP 1</h1>
+        <h2><?php echo $Batman_Begins->getDesc() ?>.</h2>
 
+        <h2><?php echo $Transformers->getDesc() ?>.</h2>
+    </div>
 </body>
 
 </html>
