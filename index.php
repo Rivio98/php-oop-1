@@ -3,28 +3,28 @@
 //classe movie
 class Movie
 {   //dichiarazioni della variabile d'istanza
-    public $year;
-    public $genre;
     public $title;
+    public $year;
+    public $genres;
 
     //definisco un costrutto
-    public function __construct($_year, $_genre, $_title)
+    public function __construct($_title, $_year, ...$_genres)
     {
-        $this->year = $_year;
-        $this->genre = $_genre;
         $this->title = $_title;
+        $this->year = $_year;
+        $this->genres = $_genres;
     }
 
     //un metodo per ottenere una breve descrizione del film
     public function getDesc()
     {
-        return " Title: " . $this->title . ",Type of genre " . $this->genre . ",Production year: " . $this->year;
+        return " Title: " . $this->title . ',<br>' . "Type of genre: " . implode(", ", $this->genres) . ',<br>' . "Production year: " . $this->year;
     }
 }
 
 //creazione di oggetti movie
-$Batman_Begins = new Movie(2005, "Cinecomics", "Batman Begins");
-$Transformers = new Movie(2007, "Action,Blockbuster", "Transformers");
+$Batman_Begins = new Movie("Batman Begins", 2005, "Action", "Cinecomics", "Noir");
+$Transformers = new Movie("Transformers", 2007, "Action", "Blockbuster");
 
 ?>
 
@@ -41,9 +41,9 @@ $Transformers = new Movie(2007, "Action,Blockbuster", "Transformers");
 <body>
     <div class="container">
         <h1>PHP OOP 1</h1>
-        <h2><?php echo $Batman_Begins->getDesc() ?>.</h2>
-
-        <h2><?php echo $Transformers->getDesc() ?>.</h2>
+        <h2 class="py-5"><?php echo $Batman_Begins->getDesc() ?>.</h2>
+        <hr>
+        <h2 class="py-5"><?php echo $Transformers->getDesc() ?>.</h2>
     </div>
 </body>
 
