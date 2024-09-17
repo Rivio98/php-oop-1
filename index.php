@@ -6,6 +6,14 @@ class Movie
     public $year;
     public $genre;
     public $title;
+
+    //definisco un costrutto
+    public function __construct($_year, $_genre, $_title)
+    {
+        $this->year = $_year;
+        $this->genre = $_genre;
+        $this->title = $_title;
+    }
 }
 
 
